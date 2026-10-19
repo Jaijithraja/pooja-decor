@@ -1,0 +1,22 @@
+{
+  "name": "pooja-decor",
+  "version": "1.0.0",
+  "description": "A click-through pooja decor overlay for your desktop: marigold garland, vibhuti pattai with kumkum, agarbathi and a kumkum plate.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.poojadecor.app",
+    "productName": "Pooja Decor",
+    "files": ["main.js", "index.html", "renderer.js", "icon.png"],
+    "mac": { "category": "public.app-category.lifestyle" },
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage" }
+  }
+}
